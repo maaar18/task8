@@ -1,6 +1,16 @@
 def main():
-    number = int(input("Введите число:"))
-    base = int(input("Введите систему счисления:"))
+    number = input("Введите число:")
+    try:
+       number = int(number)
+    except ValueError:
+       print("Ошибка")
+       exit()    
+    base = input("Введите систему счисления:")
+    try:
+       base = int(base)
+    except ValueError:
+       print("Ошибка")
+       exit()    
     
     print(to_base(number, base))
     
